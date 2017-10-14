@@ -1,0 +1,43 @@
+.menu {
+            text-align: center;
+            background-color: #d5b0ac;
+            font-weight: bold;
+            text-align: center;
+            vertical-align: middle;
+        }
+.menu span {
+            position: relative;
+            display: inline-block;
+            width: 100px;
+            line-height: 30px;
+            color: #402e2a;
+
+                }
+.menu_vertical {
+            width: 100px;
+        }
+.menu_vertical span {
+            display:block;
+            border-top: 2px solid #ffffff;
+        }
+
+
+.menu_vertical .menu_vertical {
+            position: absolute;
+            top: 0px;
+            left: 100px;
+        }
+.menu .menu {
+            position: absolute;
+            visibility: hidden;
+
+        }
+.menu span:hover {
+            color: #ffffff;
+            background-color: #9cd08f;
+            cursor: pointer;
+          }
+.menu span:hover > .menu {
+            visibility: visible;
+            opacity: 1;
+        }
