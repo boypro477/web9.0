@@ -1,29 +1,40 @@
-const fs =require('fs');
-//let resultAsync=fs.writeFile("");//chay khong dong bo
-const express=require('express');
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
+const exhbs = require('express-handlebars');
 
-let app=express();
-app.get('/',(req,res)=>{
-  console.log(__dirname);
-res.sendFile(__dirname +"/public/index.html");
+const viewRouter = require('./router/viewRouter');
+const questionRouter = require('./router/questionRouter');
+const apiRouter = require('./router/apiRouter');
+const mongoose = require('mongoose');
 
-});
-app.get('/about',(req,res)=>{
-res.sendFile(__dirname +"/public/about.html");
-});
-app.get('/styleabout.css',(req,res)=>{
-res.sendFile(__dirname+"/public/styleabout.css")
-})
-//console.log(__dirname+"/public/style.css");
+let app = express();
 
-app.get('/style.css',(req,res)=>{
-res.sendFile(__dirname+"/public/style.css")
-})
+app.engine("handlebars", exhbs({ defaultLayout : "main"}));
+app.set("view engine", "handlebars");
 
-app.listen(6969,(err)=>{
-  if(err){
+app.use(bodyParser.urlencoded({ extended : true }) );
+app.use(bodyParser.json({ extended: true }) );
+app.use(express.static(__dirname + "/public"));
+
+app.use('/', viewRouter);
+app.use('/question', questionRouter);
+app.use('/api/question', apiRouter);
+
+app.use(express.static(__dirname + '/public'));
+
+mongoose.connect("mongodb://localhost/quyetde", (err) => {
+  if (err) {
     console.log(err);
-  }else {
-    console.log("website is up");
+  } else {
+    console.log("connect db success");
   }
-})
+});
+
+app.listen(6969, (err) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("Website is up");
+  }
+});
