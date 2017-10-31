@@ -1,0 +1,254 @@
+{
+  "title": "Hackathon",
+  "description":
+    "Tôi chọn số.",
+  "questions": [
+    {
+      "id": 0,
+      "title":
+        "Chọn một số từ 1 đến 10, và nhận số điểm tương ứng - nhưng chỉ khi có ít hơn 17% số người chơi cũng chọn số đó.",
+      "answer": [
+        {
+          "id": 0,
+          "name": "1"
+        },
+        {
+          "id": 1,
+          "name": "2"
+        },
+        {
+          "id": 2,
+          "name": "3"
+        },
+        {
+          "id": 3,
+          "name": "4"
+        },
+        {
+          "id": 4,
+          "name": "5"
+        },
+        {
+          "id": 5,
+          "name": "6"
+        },
+        {
+          "id": 6,
+          "name": "7"
+        },
+        {
+          "id": 7,
+          "name": "8"
+        },
+        {
+          "id": 8,
+          "name": "9"
+        },
+        {
+          "id": 9,
+          "name": "10"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "title":
+        "Chọn 4 để nhận 4 điểm chắc chắn, hoặc chọn 10 và nhận được 10 chỉ khi ít hơn 20% số người chơi cũng chọn 10.",
+      "answer": [
+        {
+          "id": 0,
+          "name": "4"
+        },
+        {
+          "id": 1,
+          "name": "10"
+        }
+      ],"score":0
+    },
+    {
+      "id": 2,
+      "title":
+        "Chọn một số từ 1 đến 10, và nhận số điểm tương ứng - nhưng chỉ khi có ít hơn 13% số người chơi cũng chọn số đó.",
+      "answer": [
+        {
+         "id": 0,
+         "name": "1"
+       },
+       {
+         "id": 1,
+         "name": "2"
+       },
+       {
+         "id": 2,
+         "name": "3"
+       },
+       {
+         "id": 3,
+         "name": "4"
+       },
+       {
+         "id": 4,
+         "name": "5"
+       },
+       {
+         "id": 5,
+         "name": "6"
+       },
+       {
+         "id": 6,
+         "name": "7"
+       },
+       {
+         "id": 7,
+         "name": "8"
+       },
+       {
+         "id": 8,
+         "name": "9"
+       },
+       {
+         "id": 9,
+         "name": "10"
+       }
+      ],"score":0
+    },
+    {
+      "id": 3,
+      "title":
+        "Có tổng cộng X người đã từng chơi game này, theo bạn bao nhiêu người trong số họ đã chiến thắng? Ghi điểm bằng (1 - (sai số / tổng số người chơi)) * 10.",
+      "answer": [
+        {
+          "id": 0,
+          "name": "Except"
+        },
+        {
+          "id": 1,
+          "name": "Only"
+        },
+        {
+          "id": 2,
+          "name": "Apart"
+        },
+        {
+          "id": 3,
+          "name": "Separate"
+        }
+      ],"score":0
+    },
+    {
+      "id": 4,
+      "title":
+        "Chọn một số từ 1 đến 10, và nhận số điểm tương ứng - nhưng chỉ khi có ít hơn 10% số người chơi cũng chọn số đó.",
+      "answer": [
+        {
+          "id": 0,
+          "name": "1"
+        },
+        {
+          "id": 1,
+          "name": "2"
+        },
+        {
+          "id": 2,
+          "name": "3"
+        },
+        {
+          "id": 3,
+          "name": "4"
+        },
+        {
+          "id": 4,
+          "name": "5"
+        },
+        {
+          "id": 5,
+          "name": "6"
+        },
+        {
+          "id": 6,
+          "name": "7"
+        },
+        {
+          "id": 7,
+          "name": "8"
+        },
+        {
+          "id": 8,
+          "name": "9"
+        },
+        {
+          "id": 9,
+          "name": "10"
+        }
+      ],"score":0
+    },
+    {
+      "id": 5,
+      "title":
+        "Chọn một số từ 1 đến 15, và ghi điểm nếu số đó nhỏ hơn trung bình cộng của tất cả những số người chơi đã chọn.",
+      "answer": [
+        {
+          "id": 0,
+          "name": "1"
+        },
+        {
+          "id": 1,
+          "name": "2"
+        },
+        {
+          "id": 2,
+          "name": "3"
+        },
+        {
+          "id": 3,
+          "name": "4"
+        },
+        {
+          "id": 4,
+          "name": "5"
+        },
+        {
+          "id": 5,
+          "name": "6"
+        },
+        {
+          "id": 6,
+          "name": "7"
+        },
+        {
+          "id": 7,
+          "name": "8"
+        },
+        {
+          "id": 8,
+          "name": "9"
+        },
+        {
+          "id": 9,
+          "name": "10"
+        },
+        {
+          "id": 10,
+          "name": "11"
+        },
+        {
+          "id": 11,
+          "name": "12"
+        },
+        {
+          "id": 12,
+          "name": "13"
+        },
+        {
+          "id": 13,
+          "name": "14"
+        },
+        {
+          "id": 14,
+          "name": "15"
+        }
+      ],
+      "score":0
+    }
+  ]
+}
