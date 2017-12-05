@@ -13,19 +13,29 @@ router.post('/add',(req,res)=>{
     }
   });
 });
+router.post('/like',(req,res)=>{
+answerController.updateLikeAnswer(req.body.Like,(err,doc)=>{
+  res.redirect(`/api/answers/${doc.idQuestion}`);
+})
+console.log("aaa");
+console.log(req.body.Like);
+})
 router.get('/:id', (req, res) => {
-let answerList =answerController.getAnswerByIdQuestion(req.params.id,answerList=>{
+let answerList =answerController.getAllCookAnswerByIdQuestion(req.params.id,answerList=>{
     // console.log(answerList);
     // // console.log(req.params.id);
     // console.log(answerList)
-  let test =  answerList.map((answerList)=>{
+  let data =  answerList.map((answerList)=>{
       return {
-        username:answerList.username,
+        idAnswer:answerList._id,
+        idQuestion:answerList.idQuestion,
+        answer:answerList.answer,
+        username:answerList.idUser.username,
+        userAvatar:answerList.idUser.userAvatar,
         like:answerList.like,
       }
     })
-    console.log(test);
-    res.render("answer");
+    res.render("answer",{data:data});
 })
 });
 module.exports=router;

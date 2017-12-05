@@ -1,15 +1,18 @@
-<form method="post" action="/test/answer" id="test_form">
+<form method="post" action="/api/answers/like" >
 
-            {{#each answerList.answer}}
+            {{#each data }}
             <div class="form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" type="radio" name="question_{{../id}}" value="{{id}}">
-                    {{answer}}
-                </label>
+                  <p>Name: {{username}}</p>
+                  <p>Answer: {{answer}}</p>
+                  <img width="100px" height="100px"src={{userAvatar}}  class="img-fluid">
+
+                  <p>Like: {{like}}</p>
+                  <!-- <p>{{idAnswer}}</p> -->
+            <button type="submit" class="btn btn-primary" name="Like" value="{{idAnswer}}">Like</button>
             </div>
             {{/each}}
 
-    <div class="form-group">
+    <!-- <div class="form-group">
         <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
+    </div> -->
 </form>
