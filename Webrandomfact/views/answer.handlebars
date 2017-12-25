@@ -1,18 +1,25 @@
-<form method="post" action="/api/answers/like" >
-
+<form method="post" action="/api/answers/like" id="answer_form" onload="checkLike()">
+  <p id="test">Hello</p>
             {{#each data }}
             <div class="form-check">
+
                   <p>Name: {{username}}</p>
                   <p>Answer: {{answer}}</p>
                   <img width="100px" height="100px"src={{userAvatar}}  class="img-fluid">
-
                   <p>Like: {{like}}</p>
+                  <p>Liked:{{liked}}<p>
                   <!-- <p>{{idAnswer}}</p> -->
-            <button type="submit" class="btn btn-primary" name="Like" value="{{idAnswer}}">Like</button>
+                {{#if liked}}
+                  <button type="submit" class="btn btn-secondary" disabled name="Like" value="{{idAnswer}}">Like</button>
+                {{else}}
+                  <button type="submit" class="btn btn-primary" name="Like" value="{{idAnswer}}">Like</button>
+                {{/if}}
+
             </div>
             {{/each}}
 
     <!-- <div class="form-group">
         <button type="submit" class="btn btn-primary">Submit</button>
     </div> -->
+
 </form>
